@@ -1,0 +1,28 @@
+# Keycloak — Instalación
+
+## Requisitos
+
+- Docker / Docker Compose
+- Puerto `8080` disponible
+
+## Docker Compose
+
+```yaml
+services:
+  keycloak:
+    image: quay.io/keycloak/keycloak:24.0
+    command: start-dev
+    environment:
+      KEYCLOAK_ADMIN: admin
+      KEYCLOAK_ADMIN_PASSWORD: admin
+    ports:
+      - "8080:8080"
+```
+
+Levantar:
+
+```bash
+docker compose up -d
+```
+
+Acceder en: `http://localhost:8080`

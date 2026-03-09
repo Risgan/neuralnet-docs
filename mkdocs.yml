@@ -1,0 +1,115 @@
+site_name: Neural Net
+site_url: https://mi-sitio.com
+site_description: Descripción del sitio
+site_author: Tu Nombre
+
+# Repositorio (opcional)
+repo_name: usuario/repo
+repo_url: https://github.com/usuario/repo
+
+theme:
+  name: material
+  language: es
+
+  # Paleta de colores (modo claro / oscuro)
+  palette:
+    - scheme: default
+      primary: indigo
+      accent: indigo
+      toggle:
+        icon: material/brightness-7
+        name: Cambiar a modo oscuro
+    - scheme: slate
+      primary: indigo
+      accent: indigo
+      toggle:
+        icon: material/brightness-4
+        name: Cambiar a modo claro
+
+  # Fuente
+  font:
+    text: Roboto
+    code: Roboto Mono
+
+  # Íconos y logo
+  # logo: assets/logo.png
+  # favicon: assets/favicon.png
+
+  features:
+    - navigation.tabs          # Pestañas superiores
+    - navigation.tabs.sticky   # Pestañas fijas al hacer scroll
+    - navigation.sections      # Secciones en la barra lateral
+    - navigation.expand        # Expandir secciones automáticamente
+    - navigation.top           # Botón "volver arriba"
+    - navigation.footer        # Navegación anterior/siguiente en el pie
+    - search.suggest           # Sugerencias en la búsqueda
+    - search.highlight         # Resaltar resultados de búsqueda
+    - content.code.copy        # Botón copiar en bloques de código
+    - content.tabs.link        # Pestañas de contenido enlazables
+
+# Extensiones Markdown
+markdown_extensions:
+  - admonition                 # Bloques de nota, advertencia, etc.
+  - pymdownx.details           # Bloques colapsables
+  - pymdownx.superfences:      # Código dentro de otros bloques
+      custom_fences:
+        - name: mermaid
+          class: mermaid
+          format: !!python/name:pymdownx.superfences.fence_code_format
+  - pymdownx.highlight:        # Resaltado de sintaxis
+      anchor_linenums: true
+  - pymdownx.inlinehilite      # Resaltado en línea
+  - pymdownx.snippets          # Incluir fragmentos de otros archivos
+  - pymdownx.tabbed:           # Pestañas de contenido
+      alternate_style: true
+  - pymdownx.emoji:            # Soporte de emojis
+      emoji_index: !!python/name:material.extensions.emoji.twemoji
+      emoji_generator: !!python/name:material.extensions.emoji.to_svg
+  - attr_list                  # Atributos en elementos Markdown
+  - md_in_html                 # Markdown dentro de HTML
+  - tables                     # Tablas
+  - toc:                       # Tabla de contenidos
+      permalink: true
+
+# Plugins
+plugins:
+  - search:
+      lang: es
+
+nav:
+  - Inicio: index.md
+
+  - NeuralNet:
+      - Overview: neuralnet/index.md
+      - Keycloak:
+          - Overview: neuralnet/keycloak/index.md
+          - Instalación: neuralnet/keycloak/instalacion.md
+          - Configuración: neuralnet/keycloak/configuracion.md
+      - MinIO:
+          - Overview: neuralnet/minio/index.md
+          - Instalación: neuralnet/minio/instalacion.md
+          - Configuración: neuralnet/minio/configuracion.md
+      - Vault:
+          - Overview: neuralnet/vault/index.md
+          - Instalación: neuralnet/vault/instalacion.md
+          - Configuración: neuralnet/vault/configuracion.md
+
+  - NeuralOps:
+      - Overview: neuralops/index.md
+      - Stack Tecnológico: neuralops/stack-tecnologico.md
+      - Arquitectura: neuralops/arquitectura.md
+      - Módulos: neuralops/modulos.md
+      - Base de Datos: neuralops/base-datos.md
+      - Seguridad y Autenticación: neuralops/seguridad.md
+      - Angular vs React: neuralops/angular-vs-react.md
+      - Roadmap de Implementación: neuralops/roadmap-implementacion.md
+
+  - TruckManager:
+      - Overview: truckmanager/index.md
+      - Arquitectura: truckmanager/arquitectura.md
+      - Flujo de transporte: truckmanager/flujo-transporte.md
+
+  - NeuralFlow:
+      - Overview: neuralflow/index.md
+      - Arquitectura: neuralflow/arquitectura.md
+      - Gestión de tareas: neuralflow/tareas.md
